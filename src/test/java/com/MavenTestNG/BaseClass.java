@@ -14,6 +14,7 @@ public class BaseClass {
 		driver.get("https://www.google.com/");
 		
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("syntax");
+		driver.findElement(By.xpath("//div[@class='FPdoLc VlcLAe']//input[@value='Google Search']")).submit();
 	}
 
 }
