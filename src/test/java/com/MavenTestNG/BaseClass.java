@@ -3,6 +3,7 @@ package com.MavenTestNG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class BaseClass {
@@ -14,7 +15,12 @@ public class BaseClass {
 		driver.get("https://www.google.com/");
 		
 		driver.findElement(By.xpath("//input[@title='Search']")).sendKeys("syntax");
-		driver.findElement(By.xpath("//div[@class='FPdoLc VlcLAe']//input[@value='Google Searc']")).submit();
+		driver.findElement(By.xpath("//div[@class='FPdoLc VlcLAe']//input[@value='Google Search']")).submit();
+	}
+	
+	@Test
+	public void failThis() {
+		Assert.assertEquals(12, 13);
 	}
 
 }
